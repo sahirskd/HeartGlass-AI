@@ -1,0 +1,6 @@
+[core]
+    remote = s3-remote
+    site_cache_dir = /Users/sahirskd/.dvc/site_cache
+['remote "s3-remote"']
+    url = s3://cardiorisk-v1-models/dvc-storage
+    region = us-east-2
