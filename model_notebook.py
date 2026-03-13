@@ -532,43 +532,43 @@ model_configs = [
             "model__min_samples_leaf": [3, 5]
         }
     },
-    # {
-    #     "name": "GradientBoosting",
-    #     "pipeline": Pipeline([
-    #         ('scaler', StandardScaler()),
-    #         ('imputer', KNNImputer(n_neighbors=5)),
-    #         ('model', GradientBoostingClassifier(random_state=RANDOM_STATE))
-    #     ]),
-    #     "params": {
-    #           "model__n_estimators": [100, 200],
-    #           "model__learning_rate": [0.05, 0.1],
-    #           "model__max_depth": [3, 5]
-    #     }
-    # },
-    # {
-    #     "name": "AdaBoost",
-    #     "pipeline": Pipeline([
-    #         ('scaler', StandardScaler()),
-    #         ('imputer', KNNImputer(n_neighbors=5)),
-    #         ('model', AdaBoostClassifier(random_state=RANDOM_STATE))
-    #     ]),
-    #     "params": {
-    #           "model__n_estimators": [50,100,200],
-    #           "model__learning_rate": [0.05,0.1,1]
-    #     }
-    # },
-    # {
-    #     "name": "KNeighbors",
-    #     "pipeline": Pipeline([
-    #         ('scaler', StandardScaler()),
-    #         ('imputer', KNNImputer(n_neighbors=5)),
-    #         ('model', KNeighborsClassifier())
-    #     ]),
-    #     "params": {
-    #     "model__n_neighbors": [3,5,7,9],
-    #     "model__weights": ["uniform", "distance"]
-    # }
-    # }
+    {
+        "name": "GradientBoosting",
+        "pipeline": Pipeline([
+            ('scaler', StandardScaler()),
+            ('imputer', KNNImputer(n_neighbors=5)),
+            ('model', GradientBoostingClassifier(random_state=RANDOM_STATE))
+        ]),
+        "params": {
+              "model__n_estimators": [100, 200],
+              "model__learning_rate": [0.05, 0.1],
+              "model__max_depth": [3, 5]
+        }
+    },
+    {
+        "name": "AdaBoost",
+        "pipeline": Pipeline([
+            ('scaler', StandardScaler()),
+            ('imputer', KNNImputer(n_neighbors=5)),
+            ('model', AdaBoostClassifier(random_state=RANDOM_STATE))
+        ]),
+        "params": {
+              "model__n_estimators": [50,100,200],
+              "model__learning_rate": [0.05,0.1,1]
+        }
+    },
+    {
+        "name": "KNeighbors",
+        "pipeline": Pipeline([
+            ('scaler', StandardScaler()),
+            ('imputer', KNNImputer(n_neighbors=5)),
+            ('model', KNeighborsClassifier())
+        ]),
+        "params": {
+        "model__n_neighbors": [3,5,7,9],
+        "model__weights": ["uniform", "distance"]
+    }
+    }
 ]
 
 
