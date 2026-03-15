@@ -81,6 +81,12 @@ def train():
     # Evaluation
     y_pred = model.predict(X_test)
     y_prob = model.predict_proba(X_test)[:, 1]
+
+    # y_pred_train = model.predict(X_train)
+    y_prob_train = model.predict_proba(X_train)[:, 1]
+
+    roc_train = roc_auc_score(y_train, y_prob_train)
+    roc_test = roc_auc_score(y_test, y_prob)
     
     print("\nModel Evaluation:")
     print(classification_report(y_test, y_pred))
@@ -88,6 +94,9 @@ def train():
     f1 = f1_score(y_test, y_pred)
     print(f"AUC-ROC: {auc:.4f}")
     print(f"F1-Score: {f1:.4f}")
+
+    print('Train Score: ', roc_train)
+    print('Test Score: ', roc_test)
     
     # Check baseline (Requirement: > 0.85)
     if auc < 0.85:
