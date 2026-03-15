@@ -10,8 +10,9 @@ from sklearn.metrics import classification_report, roc_auc_score, f1_score
 import os
 
 # Configuration
-DATA_PATH = 'ml/data/heart_disease_uci.csv'
-MODEL_PATH = 'ml/models/heart_disease_model.joblib'
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(base_dir, 'dataset/heart_disease_uci.csv')
+MODEL_PATH = os.path.join(base_dir, 'ml/models/heart_disease_model.joblib')
 EXPLAINER_PATH = 'ml/models/shap_explainer.joblib'
 RANDOM_STATE = 32
 
@@ -119,7 +120,6 @@ def train():
         'num_cols': num_cols
     }
     joblib.dump(artifacts, MODEL_PATH)
-    joblib.dump(explainer, EXPLAINER_PATH)
     print("Done.")
 
 if __name__ == "__main__":

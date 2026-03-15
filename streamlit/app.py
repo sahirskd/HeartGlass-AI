@@ -14,12 +14,12 @@ st.markdown("Enter patient details below to get a risk assessment and an explana
 # Paths setup (allowing the script to run from any directory)
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(base_dir, 'ml/models/heart_disease_model.joblib')
-EXPLAINER_PATH = os.path.join(base_dir, 'ml/models/shap_explainer.joblib')
 
 @st.cache_resource
 def load_models():
     artifacts = joblib.load(MODEL_PATH)
-    explainer = joblib.load(EXPLAINER_PATH)
+    model = artifacts['model']
+    explainer = shap.TreeExplainer(model)
     return artifacts, explainer
 
 try:
