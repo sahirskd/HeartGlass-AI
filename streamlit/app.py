@@ -121,5 +121,7 @@ try:
                 st.caption("🔴 Red bars increase the risk score. 🟢 Green bars decrease the risk score.")
 
 except Exception as e:
+    import traceback
     st.error(f"Error loading models or generating prediction: {str(e)}")
+    st.code(traceback.format_exc(), language="python")
     st.info("🚨 Make sure you have trained models saved in `ml/models/` first! Run `python ml/train.py`.")
