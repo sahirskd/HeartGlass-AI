@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
         <h1 className="text-5xl md:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-slate-500 tracking-tight">
-          CardioRisk AI
+          HeartGlass AI
         </h1>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
           Explainable Risk Scoring System for Chronic Heart Disease using Cost-Sensitive Deep Learning Specialists.
@@ -39,7 +39,7 @@ export default function Home() {
       </AnimatePresence>
 
       <footer className="mt-20 text-slate-500 text-xs py-12 border-t border-slate-800 w-full text-center">
-        © 2026 CardioRisk Intelligence. Clinical Decision Support System.
+        © 2026 HeartGlass AI. Clinical Decision Support System.
       </footer>
     </main>
   )

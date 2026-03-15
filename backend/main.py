@@ -7,7 +7,7 @@ import shap
 import os
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Explainable Risk Scoring API")
+app = FastAPI(title="HeartGlass AI API")
 
 # Add CORS middleware
 app.add_middleware(

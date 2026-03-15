@@ -7,8 +7,8 @@ import shap
 import matplotlib.pyplot as plt
 
 # Configuration
-st.set_page_config(page_title="CardioRisk AI", layout="wide", page_icon="🫀")
-st.title("🫀 CardioRisk AI: Explainable Heart Disease Prediction")
+st.set_page_config(page_title="HeartGlass AI", layout="wide", page_icon="🫀")
+st.title("🫀 HeartGlass AI: Explainable Heart Disease Prediction")
 st.markdown("Enter patient details below to get a risk assessment and an explanation of the driving factors.")
 
 # Paths setup (allowing the script to run from any directory)
