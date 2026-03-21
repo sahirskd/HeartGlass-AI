@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import joblib
-import shap
+# import shap
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.impute import KNNImputer
@@ -11,7 +11,7 @@ import os
 
 # Configuration
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_PATH = os.path.join(base_dir, 'dataset/heart_disease_uci.csv')
+DATA_PATH = os.path.join(base_dir, 'ml/data/heart_disease_uci.csv')
 MODEL_PATH = os.path.join(base_dir, 'ml/models/heart_disease_model.joblib')
 EXPLAINER_PATH = 'ml/models/shap_explainer.joblib'
 RANDOM_STATE = 32
@@ -106,7 +106,7 @@ def train():
     print("\nIntegrating SHAP...")
     # Initialize SHAP explainer
     # TreeExplainer is best for RandomForest
-    explainer = shap.TreeExplainer(model)
+    # explainer = shap.TreeExplainer(model)
     
     # Save artifacts
     print(f"Saving artifacts to ml/models/...")
